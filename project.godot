@@ -19,9 +19,12 @@ config/icon="res://icon.svg"
 
 Eventcontroller="*uid://d0b8c4xbh6sqb"
 Gamecontroller="*uid://bkwbfylumc5nd"
+Audiocontroller="*uid://603c1fu7rccj"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

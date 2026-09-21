@@ -14,9 +14,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
+			Audiocontroller.play_jump()
 		elif not has_double_jumped:
 			velocity.y = JUMP_VELOCITY
 			has_double_jumped = true
+			Audiocontroller.play_jump()
 
 	var direction := Input.get_axis("left", "right")
 	if direction:
@@ -25,3 +27,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+var starting_position: Vector2
+func _ready() -> void:
+	starting_position = position
+
+func die() -> void:
+	position = starting_position

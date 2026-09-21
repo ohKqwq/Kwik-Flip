@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://603c1fu7rccj"]
+
+[ext_resource type="Script" uid="uid://4rdg3ay4hxku" path="res://audiocontroller.gd" id="1_e4qns"]
+[ext_resource type="AudioStream" uid="uid://dxftakx30fnmb" path="res://16 Paradise, Paradise.mp3" id="2_63xql"]
+[ext_resource type="AudioStream" uid="uid://b0ogt1vpkdn5c" path="res://snd_flowery_voiceclip_jarona1.wav" id="3_706l2"]
+[ext_resource type="AudioStream" uid="uid://8q5rb6l8hqtg" path="res://bocchi-explode-sound.mp3" id="4_hcyaj"]
+[ext_resource type="AudioStream" uid="uid://c57cnc8bgu2nq" path="res://crowd_small_chil_ec049202_9klCwI6.mp3" id="5_63xql"]
+
+[node name="audiocontroller" type="Node2D" unique_id=733058564]
+script = ExtResource("1_e4qns")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=528745173]
+stream = ExtResource("2_63xql")
+
+[node name="jump" type="AudioStreamPlayer" parent="." unique_id=444714279]
+stream = ExtResource("3_706l2")
+
+[node name="itemcollect" type="AudioStreamPlayer" parent="." unique_id=31515120]
+stream = ExtResource("4_hcyaj")
+
+[node name="win" type="AudioStreamPlayer" parent="." unique_id=1653954339]
+stream = ExtResource("5_63xql")
